@@ -3,8 +3,9 @@ def main():
     expenses = []
 
     while True:
-        entry = input("(Write here the amount of expenses) or to stop write 'stop'")
-        if entry.lower() == 'stop':
+        entry = input("(Enter the cost amount) or 'q' to finish")
+        
+        if entry.lower()=='q':
             break
 
         try:
@@ -12,16 +13,16 @@ def main():
             expenses.append(amount)
 
         except ValueError:
-            print("WRITE A NUMBER!")
+            print("Write the amount")
 
-        if expenses:
-            total = sum(expenses)
-            average = total/len(expenses)
-            print(f"\nTotal {total: .2f} $")
-            print(f"\nAverage {average: .2f} $")
+    if expenses:
+        total = sum(expenses)
+        average = total/len(expenses)
+        print(f"Total {total: .2f} $")
+        print(f"Average {average: .2f} $")
 
-        else:
-            print("NO COST")
+    else: 
+        print("Sorry, sn error occurred")
 
 if __name__ == "__main__":
     main()
