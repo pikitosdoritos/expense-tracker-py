@@ -3,7 +3,7 @@ def main():
     expenses = []
 
     while True:
-        entry = input("(Enter the cost amount) or 'q' to finish")
+        entry = input("(Enter the cost amount) or 'q' to finish: ")
         
         if entry.lower()=='q':
             break
